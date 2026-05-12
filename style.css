@@ -45,26 +45,62 @@ a {
     color: white;
 }
 @media (max-width: 768px) {
+
     body {
-        padding: 10px;
+        padding: 0;
+        overflow-x: hidden;
     }
 
-    .container {
+    .navbar {
+
+        width: 90%;
+        margin: 20px auto;
+
+        padding: 25px;
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        gap: 25px;
+
+        border-radius: 35px;
+
+        box-sizing: border-box;
+    }
+
+    .titulo {
+        font-size: 55px;
+        text-align: center;
+    }
+
+    .pesquisa {
         width: 100%;
+        max-width: 100%;
+
+        padding: 15px;
+
+        font-size: 18px;
+
+        box-sizing: border-box;
     }
 
-    img {
-        width: auto;
-        height: auto;   
+    .nav-links {
+        display: flex;
+        gap: 30px;
+    }
+
+    .nav-links a {
+        font-size: 28px;
     }
 
     h1 {
-        font-size: 30px;
+        font-size: 55px;
         text-align: center;
     }
 
     h2 {
-        font-size: 22px;
+        font-size: 28px;
         text-align: center;
     }
 
@@ -74,25 +110,54 @@ a {
         text-align: center;
     }
 
-    button {
-        width: 80%;
-        font-size: 18px;
-        padding: 14px;
-    } 
-    .navbar {
-        flex-direction: column;
-        gap: 20px;
-        border-radius: 0;
-    }
+    .pokemon-container {
 
-    .pesquisa {
-        width: 100%;
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        justify-items: center;
+
+        gap: 35px;
+
+        padding: 20px;
     }
 
     .card {
-        width: 220px;
-        height: 320px;
+
+        width: 90%;
+        max-width: 320px;
+
+        min-height: 360px;
+
+        padding: 20px;
+
+        box-sizing: border-box;
     }
+
+    .card img {
+
+        width: 220px;
+        height: 220px;
+
+        object-fit: contain;
+    }
+
+    button {
+
+        width: 100%;
+        max-width: 300px;
+
+        font-size: 18px;
+
+        padding: 14px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
 }
 .pesquisa{
     width: 320px;

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pokedex</title>
+
+        <link rel="stylesheet" href="style.css">
+
+ 
+    </head>
+ 
+    <body>
+
+<nav class="navbar"> 
+
+            <h1 class="titulo">Pokedex</h1>
+
+            <input type="text" id="pesquisar" placeholder="Pesquisar Pokemon" class="pesquisa">
+ 
+    
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="sobre.html">Sobre</a>
+    </div>
+ 
+</nav>
+
+<header>
+    <button class="menu-btn" onclick="abrirMenu()">☰</button>
+    <h1>Pokédex</h1>
+</header>
+
+<nav id="menuLateral" class="menu-lateral">
+    <button class="fechar-btn" onclick="fecharMenu()">×</button>
+
+    <h2>Categorias</h2>
+
+    <a href="fire.html">🔥 Fogo</a>
+    <a href="water.html">💧 Água</a>
+    <a href="grass.html">🌿 Planta</a>
+    <a href="electric.html">⚡ Elétrico</a>
+    <a href="bug.html">🐛 Inseto</a>
+    <a href="ghost.html">👻 Fantasma</a>
+    <a href="normal.html">🔘 Normal</a>
+    <a href="fighting.html">🥊 Lutador</a>
+    <a href="psychic.html">🔮 Psíquico</a>
+    <a href="rock.html">🪨 Pedra</a>
+    <a href="ice.html">❄️ Gelo</a>
+    <a href="flying.html">🕊️ Voador</a>
+    <a href="dark.html">🌙 Noturno</a>
+    <a href="steel.html">⚙️ Aço</a>
+    <a href="fairy.html">🧚 Fada</a>
+    <a href="ground.html">🌍 Terra</a>
+</nav>
+
+<h2 class="subtitulo">Pokémons</h2>
+
+<section class="pokedex">
+    <div class="container" id="pokemon-api"></div>
+</section>
+
+<script src="script.js"></script>
+
+    </body>
+</html>

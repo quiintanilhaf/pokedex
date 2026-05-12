@@ -1,0 +1,516 @@
+body {
+    background-color: #0d0d0d;
+    color: white;
+    font-family: "Times New Roman", Times, serif;
+    margin: 0;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 50px;
+    text-align: center;
+}
+h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 36px;
+    text-align: center;
+}
+table {
+    margin: auto;
+    border-spacing: 40px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+p {
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    img {
+        width: auto;
+        height: auto;   
+    }
+
+    h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.6;
+        text-align: center;
+    }
+
+    button {
+        width: 80%;
+        font-size: 18px;
+        padding: 14px;
+    } 
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+        border-radius: 0;
+    }
+
+    .pesquisa {
+        width: 100%;
+    }
+
+    .card {
+        width: 220px;
+        height: 320px;
+    }
+}
+.pesquisa{
+    width: 320px;
+    padding: 15px 20px;
+
+    border: 2px solid goldenrod;
+    border-radius: 30px;
+
+    background-color: #1e1e1e;
+    color: white;
+
+    font-size: 16px;
+
+    outline: none;
+
+    display: block;
+    margin: 30px auto;
+
+    transition: 0.3s;
+}
+
+.pesquisa::placeholder{
+    color: #aaa;
+}
+
+.pesquisa:focus{
+    box-shadow: 0 0 15px goldenrod;
+    transform: scale(1.03);
+}
+.navbar{
+    background-color: #111;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 60px;
+
+    padding: 20px 40px;
+
+    border-bottom: 2px solid goldenrod;
+}
+
+.logo{
+    color: white;
+    font-size: 32px;
+}
+
+.nav-links a{
+    color: white;
+
+    text-decoration: none;
+
+    margin-left: 25px;
+
+    font-size: 20px;
+
+    transition: 0.3s;
+}
+.nav-links a:hover{
+    color: goldenrod;
+}
+.pokedex {
+    padding: 20px 40px 60px;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+.pokemon-card {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 40px auto;
+
+    background: rgba(255,255,255,0.08);
+
+    border-radius: 30px;
+
+    padding: 40px;
+
+    box-sizing: border-box;
+}
+
+.pokemon-img {
+    width: 260px;
+    height: auto;
+    margin: 0 auto 20px;
+    filter: drop-shadow(0 0 25px var(--brilho));
+}
+.pokemon-title {
+    color: white;
+    font-size: 56px;
+}
+
+h1 {
+    font-size: 48px;
+    color: white;
+    margin: 15px 0;
+}
+
+.descricao {
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.info {
+    margin-top: 30px;
+}
+
+.info h2 {
+    font-size: 34px;
+    color: whitesmoke;
+}
+
+.info ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.info li {
+    background: rgba(0, 0, 0, 0.25);
+    padding: 15px;
+    border-radius: 15px;
+    font-size: 17px;
+}
+
+.botao {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 28px;
+    background-color: #aaa;
+    color: #06111f;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background-color: white;
+    transform: scale(1.05);
+}
+.water {
+    background: linear-gradient(135deg, #0b2239, #1e88c8);
+    border: 2px solid #75d6ff;
+    box-shadow: 0 0 35px rgba(117, 214, 255, 0.35);
+    --brilho: rgba(117, 214, 255, 0.8);
+}
+.fire {
+    background: linear-gradient(135deg, #3a0903, #d9480f);
+    border: 2px solid #ff9b54;
+    box-shadow: 0 0 35px rgba(255, 120, 40, 0.35);
+    --brilho: rgba(255, 120, 40, 0.8);
+}
+.grass {
+    background: linear-gradient(135deg, #082b16, #2f9e44);
+    border: 2px solid #8ce99a;
+    box-shadow: 0 0 35px rgba(140, 233, 154, 0.35);
+    --brilho: rgba(140, 233, 154, 0.8);
+}
+.bug {
+    background: linear-gradient(135deg, #1f2a08, #6a994e);
+    border: 2px solid #b5e48c;
+    box-shadow: 0 0 35px rgba(181, 228, 140, 0.35);
+    --brilho: rgba(181, 228, 140, 0.8);
+}
+.electric {
+    background: linear-gradient(135deg, #1e1e0f, #f9c74f);
+    border: 2px solid #f9c74f;
+    box-shadow: 0 0 35px rgba(249, 199, 79, 0.35);
+    --brilho: rgba(249, 199, 79, 0.8);
+}
+.ghost {
+    background: linear-gradient(135deg, #1e1e1e, #6a5d7b);
+    border: 2px solid #6a5d7b;
+    box-shadow: 0 0 35px rgba(106, 93, 123, 0.35);
+    --brilho: rgba(106, 93, 123, 0.8);
+}
+.dark {
+    background: linear-gradient(135deg, #1e1e1e, #3b0a0a);
+    border: 2px solid #3b0a0a;
+    box-shadow: 0 0 35px rgba(59, 10, 10, 0.35);
+    --brilho: rgba(59, 10, 10, 0.8);
+}
+.rock {
+    background: linear-gradient(135deg, #1e1e1e, #4a4a4a);
+    border: 2px solid #4a4a4a;
+    box-shadow: 0 0 35px rgba(74, 74, 74, 0.35);
+    --brilho: rgba(74, 74, 74, 0.8);
+}
+.psychic {
+    background: linear-gradient(135deg, #1e1e1e, #9b5de5);
+    border: 2px solid #9b5de5;
+    box-shadow: 0 0 35px rgba(155, 93, 229, 0.35);
+    --brilho: rgba(155, 93, 229, 0.8);
+}
+.fairy {
+    background: linear-gradient(135deg, #1e1e1e, #f15bb5);
+    border: 2px solid #f15bb5;
+    box-shadow: 0 0 35px rgba(241, 91, 181, 0.35);
+    --brilho: rgba(241, 91, 181, 0.8);
+}   
+.ground {
+    background: linear-gradient(135deg, #1e1e1e, #a0522d);
+    border: 2px solid #a0522d;
+    box-shadow: 0 0 35px rgba(160, 82, 45, 0.35);
+    --brilho: rgba(160, 82, 45, 0.8);
+}
+.normal {
+    background: linear-gradient(135deg, #1e1e1e, #a8a77a);
+    border: 2px solid #a8a77a;
+    box-shadow: 0 0 35px rgba(168, 167, 122, 0.35);
+    --brilho: rgba(168, 167, 122, 0.8);
+}
+.flying {
+    background: linear-gradient(135deg, #1e1e1e, #a98ff3);
+    border: 2px solid #a98ff3;
+    box-shadow: 0 0 35px rgba(169, 143, 243, 0.35);
+    --brilho: rgba(169, 143, 243, 0.8);
+}
+.fighting {
+    background: linear-gradient(135deg, #1e1e1e, #c22e28);
+    border: 2px solid #c22e28;
+    box-shadow: 0 0 35px rgba(194, 46, 40, 0.35);
+    --brilho: rgba(194, 46, 40, 0.8);
+}
+.ice {
+    background: linear-gradient(135deg, #1e1e1e, #96d9d6);
+    border: 2px solid #96d9d6;
+    box-shadow: 0 0 35px rgba(150, 217, 214, 0.35);
+    --brilho: rgba(150, 217, 214, 0.8);
+}
+.steel {
+    background: linear-gradient(135deg, #1e1e1e, #b7b7ce);
+    border: 2px solid #b7b7ce;
+    box-shadow: 0 0 35px rgba(183, 183, 206, 0.35);
+    --brilho: rgba(183, 183, 206, 0.8);
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 20px;
+}
+
+.menu-btn {
+    position: absolute;
+    left: 25px;
+    font-size: 35px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.menu-btn:hover {
+    transform: scale(1.1);
+}
+
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    max-height: 0;
+    overflow-y: auto;
+
+    background: linear-gradient(180deg, #1a1a1a, #0d0d0d);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+
+    padding: 0 25px;
+
+    transition: max-height 0.5s ease, padding 0.5s ease;
+
+    z-index: 1000;
+}
+
+.menu-lateral.ativo {
+    max-height: 80vh;
+    padding: 30px 25px;
+}
+
+.menu-lateral h2 {
+    color: white;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+.menu-lateral a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 18px 0;
+    padding: 12px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.menu-lateral a:hover {
+    background-color: #ffcb05;
+    color: #1a1a1a;
+    transform: translateX(8px);
+}
+
+.fechar-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 35px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.pagina-fire  {
+    background: linear-gradient(180deg, #3b0a0a, #ff5e00);
+}
+.pagina-bug {
+    background: linear-gradient(180deg, #1f2a08, #6a994e);
+}
+.pagina-ground {
+    background: linear-gradient(180deg, #b65607, #61280e);
+}
+.pagina-rock {
+    background: linear-gradient(180deg, #1e1e1e, #4a4a4a);
+}
+.pagina-psychic {
+    background: linear-gradient(180deg, #1e1e1e, #9b5de5);
+}
+.pagina-fairy {
+    background: linear-gradient(180deg, #1e1e1e, #f15bb5);
+}
+.pagina-flying {
+    background: linear-gradient(180deg, #1e1e1e, #a98ff3);
+}
+.pagina-fighting {
+    background: linear-gradient(180deg, #1e1e1e, #c22e28);
+}
+.pagina-ice {
+    background: linear-gradient(180deg, #1e1e1e, #96d9d6);
+}
+.pagina-steel {
+    background: linear-gradient(180deg, #1e1e1e, #b7b7ce);
+}
+.pagina-normal {
+    background: linear-gradient(180deg, #1e1e1e, #a8a77a);
+}
+.pagina-dark {
+    background: linear-gradient(180deg, #1e1e1e, #3b0a0a);
+}
+.pagina-ghost {
+    background: linear-gradient(180deg, #1e1e1e, #6a5d7b);
+}
+.pagina-electric {
+    background: linear-gradient(180deg, #1e1e0f, #f9c74f);
+}
+.pagina-water {
+    background: linear-gradient(180deg, #0b2239, #1e88c8);
+}
+
+.pokemon-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 220px));
+    justify-content: center;
+    gap: 30px;
+    padding: 30px;
+}
+
+.card {
+    width: 220px;
+    min-height: 300px;
+    background-color: #111;
+    border-radius: 25px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.15);
+}
+
+.card img {
+    width: 170px;
+    height: 170px;
+    object-fit: contain;
+}
+
+.card h2 {
+    color: white;
+    text-transform: capitalize;
+    font-size: 22px;
+    margin-top: 15px;
+}
+.container-pokemons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 260px));
+    justify-content: center;
+    gap: 35px;
+    padding: 40px 30px;
+    max-width: 1400px;
+    margin: auto;
+}
+
